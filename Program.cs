@@ -40,6 +40,7 @@ namespace HangManExercise
             char[] chars = new char[playerPickWord.Length];
 
 
+
             for (int i = 0; i < playerPickWord.Length; i++)
             {
                 chars[i] = '_';
@@ -51,7 +52,7 @@ namespace HangManExercise
             }
 
 
-            while (chars.Contains('_') && counter < MAX_CHANCES)
+            while (chars.Contains('_') && counter < MAX_CHANCES) 
             {
 
                 Console.WriteLine("Please guess a letter from the word: ");
@@ -59,7 +60,7 @@ namespace HangManExercise
 
 
                 if (playerPickWord.Contains(playerGuess))
-                {
+                    {
                     for (int i = 0; i < playerPickWord.Length; i++)
                     {
                         if (playerGuess == playerPickWord[i])
@@ -77,6 +78,6 @@ namespace HangManExercise
             }
 
             Console.WriteLine("Congratulations , you winned!");
-        }
+        }      
     }
 }
