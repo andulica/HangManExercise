@@ -13,14 +13,14 @@
             int randNumberChosen = randNumber.Next(0, wordsToChoose.Length);
 
            
-            string playerPickWord = wordsToChoose[randNumberChosen];
+            string pickedWord = wordsToChoose[randNumberChosen];
 
 
-            char[] secretWord = new char[playerPickWord.Length];
+            char[] secretWord = new char[pickedWord.Length];
 
 
 
-            for (int i = 0; i < playerPickWord.Length; i++)
+            for (int i = 0; i < pickedWord.Length; i++)
             {
                 secretWord[i] = '_';
             }
@@ -39,11 +39,11 @@
                 Console.WriteLine();
 
 
-                if (playerPickWord.Contains(playerGuess))
+                if (pickedWord.Contains(playerGuess))
                 {
-                    for (int i = 0; i < playerPickWord.Length; i++)
+                    for (int i = 0; i < pickedWord.Length; i++)
                     {
-                        if (playerGuess == playerPickWord[i])
+                        if (playerGuess == pickedWord[i])
                         {
                             secretWord[i] = playerGuess;
                         }
